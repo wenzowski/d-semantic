@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - '0.10'
+services:
+  - 'redis-server'
+before_install:
+  - 'export DISPLAY=:99.0'
+  - 'sh -e /etc/init.d/xvfb start'
+env:
+  global:
+  # SAUCE_USERNAME
+  - secure: gA/IbtyvyWOc14pE/NZCxUEkiyWhfkEggkI9U98ub+8Hfz/DeZDLWtr+CDc5ubquTPpNLUezN5sbbbLvJsz0TQ0XSkUH18gpONkWUfVwEHgfn0tzD7qPumDb0nQFYhyuAFss/iCCv9w+RoG+IE0dTtvyS2iAFpxCiSZjB7BgQwM=
+  # SAUCE_ACCESS_KEY
+  - secure: RQ6bv2Kj7winm6BfGKxn8pA0eiMycuaaqNnilzmj4FDQT93k2EE7j8YbsV+xhXF7ZICzWrln2ek2okevtKlUOU+YGkpybJoAb27I8SuPihcEPv6VgEvcWQYIVptdum9mQQxkvgGlEQ2Us8JPNyfRROy3gnXS5/wgEdlHi+eHgyQ=
+

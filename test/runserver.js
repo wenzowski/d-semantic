@@ -4,9 +4,11 @@ var webdriver   = require('webdriverjs')
 
 before(function (done) {
   var port = process.env.PORT || 33729
-  this.location = "http://localhost:" + port
+  this.location = 'http://localhost:' + port
 
-  var opts = { desiredCapabilities : { browserName : 'phantomjs' } }
+  var opts = {}
+  if (process.env.CI !== 'true')
+    opts = { desiredCapabilities : { browserName : 'phantomjs' } }
   var wd = this.wd = webdriver.remote(opts)
 
   this.server = require('http').createServer(expressApp)
